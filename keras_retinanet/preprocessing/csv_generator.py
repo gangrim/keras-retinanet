@@ -50,7 +50,7 @@ def _read_classes(csv_reader):
         line += 1
 
         try:
-            class_name, class_id = row
+            class_name, class_id = row[:2]
         except ValueError:
             raise_from(ValueError('line {}: format should be \'class_name,class_id\''.format(line)), None)
         class_id = _parse(class_id, int, 'line {}: malformed class ID: {{}}'.format(line))
