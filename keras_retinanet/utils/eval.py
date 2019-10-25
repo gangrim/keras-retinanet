@@ -136,6 +136,7 @@ def _get_annotations(generator):
 
         # copy detections to all_annotations
         for label in range(generator.num_classes()):
+            print(label)
             if not generator.has_label(label):
                 continue
 
