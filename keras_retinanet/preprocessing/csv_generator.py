@@ -206,6 +206,7 @@ class CSVGenerator(Generator):
     def load_image(self, image_index):
         """ Load an image at the image_index.
         """
+        print(self.image_path(image_index))
         return read_image_bgr(self.image_path(image_index))
 
     def load_annotations(self, image_index):
