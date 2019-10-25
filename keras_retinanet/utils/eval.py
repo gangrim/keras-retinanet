@@ -100,6 +100,7 @@ def _get_detections(generator, model, score_threshold=0.05, max_detections=100, 
         image_scores     = scores[scores_sort]
         image_labels     = labels[0, indices[scores_sort]]
         image_detections = np.concatenate([image_boxes, np.expand_dims(image_scores, axis=1), np.expand_dims(image_labels, axis=1)], axis=1)
+        print(image_boxes,image_scores,image_labels,image_detections)
 
         if save_path is not None:
             draw_annotations(raw_image, generator.load_annotations(i), label_to_name=generator.label_to_name)

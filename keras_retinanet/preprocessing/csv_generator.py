@@ -48,7 +48,7 @@ def _read_classes(csv_reader):
     result = OrderedDict()
     for line, row in enumerate(csv_reader):
         line += 1
-        print(line,row)
+        # print(line,row)
 
         try:
             class_name, class_id = row[:2]
