@@ -153,7 +153,7 @@ def apply_transform(matrix, image, params):
     return output
 
 
-def compute_resize_scale(image_shape, min_side=800, max_side=1333):
+def compute_resize_scale(image_shape, min_side=60, max_side=1333):
     """ Compute an image scale such that the image size is constrained to min_side and max_side.
 
     Args
@@ -179,7 +179,7 @@ def compute_resize_scale(image_shape, min_side=800, max_side=1333):
     return scale
 
 
-def resize_image(img, min_side=800, max_side=1333):
+def resize_image(img, min_side=1024, max_side=1024):
     """ Resize an image such that the size is constrained to min_side and max_side.
 
     Args
